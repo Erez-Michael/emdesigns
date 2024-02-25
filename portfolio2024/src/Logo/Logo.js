@@ -1,47 +1,46 @@
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Logo = ({ className }) => {
-  window.onscroll = function () {
-    scrollFunction();
-  };
+  const [scale, setScale] = useState("1.2");
 
-  const scrollFunction = () => {
-    if (
-      document.body.scrollTop > 50 ||
-      document.documentElement.scrollTop > 50
-    ) {
-      document.getElementById("logo").style.scale = "0.6";
-    } else {
-      document.getElementById("logo").style.scale = "1.2";
-    }
-  };
+  // When the user scrolls down 50px from the top of the document, resize logo
+  useEffect(() => {
+    const scrollFunction = () => {
+      if (window.scrollY > 50) {
+        setScale("0.6");
+      } else {
+        setScale("1.2");
+      }
+    };
+
+    window.addEventListener("scroll", scrollFunction);
+
+    // Clean up the event listener when the component unmounts
+    return () => window.removeEventListener("scroll", scrollFunction);
+  }, []);
 
   const style = {
     transition: "1s",
+    transform: `scale(${scale})`, // Apply dynamic scale
   };
 
-  
-
   return (
-    <>
-      <Container id="logo" style={style} className={className}>
-        <Wrapper className="logo">
-          <Logos id="logo" style={style}>
-            <div>
-              <h2>EM</h2>
-              <h2>EM</h2>
-              <h3>DESIGN.</h3>
-            
-            </div>
-          </Logos>
-        </Wrapper>
-      </Container>
-    </>
+    <Container id="logo" style={style} className={className}>
+      <Wrapper className="logo">
+        <Logos style={style}>
+          <div>
+            <h2>EM</h2>
+            <h2>EM</h2>
+            <h3>DESIGN.</h3>
+          </div>
+        </Logos>
+      </Wrapper>
+    </Container>
   );
 };
-
 const Container = styled.div`
-display: flex;
+  display: flex;
   flex-direction: row;
   z-index: 999 !important;
   font-weight: 900;
@@ -49,7 +48,6 @@ display: flex;
 `;
 
 const Wrapper = styled.div`
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -145,7 +143,6 @@ const Logos = styled.div`
       );
     }
   }
- 
 `;
 
 export default Logo;

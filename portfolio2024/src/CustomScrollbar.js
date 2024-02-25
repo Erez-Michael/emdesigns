@@ -19,14 +19,13 @@ const ScrollbarStyles = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(45deg, #fdb731, #f3ec78);
     border-radius: 20px; /* roundness of the scroll thumb */
+    border: solid 2px yellow;
   }
-
+  
   ::-webkit-scrollbar-thumb:hover {
-    background: transparent; /* color of the scroll thumb on hover */
-    border: solid 1px yellow;
-    
+    background-image: linear-gradient(45deg, #fdb731, #f3ec78);
+    border: none;
   }
 
 `;

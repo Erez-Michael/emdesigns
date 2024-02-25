@@ -13,11 +13,11 @@ const GlobalStyles = createGlobalStyle`
 
 
 export const Container = styled.div`
-  margin: 180px auto 0 auto;
+  margin: 350px auto 0 auto;
   padding: 0 50px;
 
-  @media screen and (max-width: 960px) {
- 
+  @media screen and (max-width: 767px) {
+    margin-top: -50px;
   }
 `;
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/clamp */

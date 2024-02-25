@@ -25,7 +25,7 @@ export const heroTwo = {
 
   linkTo: "/planets",
   imgStart: "",
-  img: "https://res.cloudinary.com/dhcrarc6f/image/upload/v1694907848/pngwing.com_13_cjr2kg.png",
+  img: "https://res.cloudinary.com/dhcrarc6f/image/upload/v1708878551/em_mkawrz.png",
   start: "true",
 };
 
@@ -40,6 +40,6 @@ export const heroThree = {
   buttonLabel: "Contact",
   linkTo: "/starships",
   imgStart: "start",
-  img: "https://res.cloudinary.com/dhcrarc6f/image/upload/v1694906971/pngwing.com_11_vqvoaf.png",
+  img: "https://res.cloudinary.com/dhcrarc6f/image/upload/v1708881349/DALL_E_2024-02-25_12.15.41_-_Create_an_image_depicting_a_web_developer_s_computer_setup_featuring_a_double_monitor_arrangement_alongside_a_laptop_and_a_mobile_device._One_monitor_eqk3yc.webp",
   start: "true",
 };

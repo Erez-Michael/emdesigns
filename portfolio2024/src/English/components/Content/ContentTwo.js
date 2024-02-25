@@ -44,12 +44,18 @@ export const ContentTwo = ({
      const Style = {
        textDecoration: "none",
        color: "whitesmoke",
-     };
+       padding: "10px 20px",
+       background: "#272B30",
+  };
+  
+    const styleTop = {
+      marginTop: "-100px",
+    };
 
   return (
     <HomeSection inverse={inverse} ref={ref}>
       <Container>
-        <ContentRow reverse={reverse}>
+        <ContentRow reverse={reverse} style={styleTop}>
           <ContentColumn>
             <TextWrapper>
               <TopLine
@@ -82,8 +88,9 @@ export const ContentTwo = ({
                 inverse={inverse}
                 primary={primary}
               >
-                              <NavLink to="/planets"
-                              style={Style}>{buttonLabelProjects}</NavLink>
+                <NavLink to="/planets" style={Style}>
+                  {buttonLabelProjects}
+                </NavLink>
               </ContentButton>
             </TextWrapper>
           </ContentColumn>

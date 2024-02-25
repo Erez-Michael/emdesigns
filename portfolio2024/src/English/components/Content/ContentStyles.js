@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 
 export const ContentRow = styled.div`
   display: flex;
-  margin: 0 -15px -15px -15px;
+  margin: 200px -15px -15px -15px;
   flex-wrap: wrap;
   align-items: center;
   flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
   justify-content: space-around;
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
-    margin-top: -200px;
+    margin-top: -50px;
   }
   `;
 
@@ -77,11 +77,10 @@ export const TopLine = styled(motion.div)`
 export const Img = styled(motion.img)`
   padding-right: 0;
   border: 0;
-  max-width: 100%;
+  max-width: 80%;
   vertical-align: middle;
   display: inline-block;
   object-fit: cover;
-  max-height: 700px;
   z-index: 1;
 `;
 
@@ -120,15 +119,12 @@ export const ContentButton = styled(motion.button)`
 
   /* Box Model */
   height: 3rem;
-  padding: ${({ big }) =>
-    big ? "12px 64px" : "10px 20px"}; /* Consolidated padding */
-  border: px solid ${({ inverse }) => (inverse ? "#FDE61E" : "#FDE61E")}; 
   border-radius: 6px;
+ 
 
   /* Typography */
   font-weight: 700;
-  font-size: ${({ fontBig }) =>
-    fontBig ? "20px" : "16px"}; 
+  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
   line-height: 18px;
   letter-spacing: 1.54px;
   text-transform: uppercase;
@@ -136,7 +132,7 @@ export const ContentButton = styled(motion.button)`
 
   /* Visual */
   background: none;
-  cursor: pointer; 
+  cursor: pointer;
   white-space: nowrap;
   outline: none;
 
@@ -148,7 +144,7 @@ export const ContentButton = styled(motion.button)`
     left: 50%;
     width: 100%;
     height: 0%;
-    background: ${({ inverse }) => (inverse ? "#FDE61E" : "white")};
+    background: ${({ inverse }) => (inverse ? "#FDE61E" : "#FDE61E")};
     opacity: 0.5;
     transform: translate(-50%, -50%) rotate(45deg);
     z-index: -1;
@@ -158,6 +154,5 @@ export const ContentButton = styled(motion.button)`
   &:hover:before {
     height: 500%;
   }
-
 `;
 
