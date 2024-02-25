@@ -43,13 +43,20 @@ export const ContentThree = ({
 
   const Style = {
     textDecoration: "none",
-    color: "#FDE61E",
+    color: "whitesmoke",
+    padding: "10px 20px",
+    background: "#272B30",
+  };
+
+  const styleTop = {
+    marginTop: "100px",
+    marginBottom:"100px"
   };
 
   return (
     <HomeSection inverse={inverse} ref={ref}>
       <Container>
-        <ContentRow reverse={reverse}>
+        <ContentRow reverse={reverse} style={styleTop}>
           <ContentColumn>
             <TextWrapper>
               <TopLine

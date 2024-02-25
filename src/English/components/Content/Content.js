@@ -43,17 +43,20 @@ export const Content = ({
 
  const Style = {
    textDecoration: "none",
-   color: "#FDE61E",
-  };
+   color: "whitesmoke",
+   padding: "10px 20px",
+   background: "#272B30",
+ };
   
-  const styleImg = {
-    marginTop: "20em"
+  const styleTop = {
+    marginTop: "200px"
   }
+
 
   return (
     <HomeSection inverse={inverse} ref={ref}>
-      <Container style={styleImg}>
-        <ContentRow reverse={reverse}>
+      <Container>
+        <ContentRow reverse={reverse} style={styleTop}>
           <ContentColumn>
             <TextWrapper>
               <TopLine
@@ -95,6 +98,7 @@ export const Content = ({
             initial={initial}
             transition={{ delay: 1.6, duration: 1.8 }}
             animate={animation}
+            inverse={inverse}
           >
             <ImgWrapper>
               <Img src={img} alt={alt} />

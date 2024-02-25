@@ -22,7 +22,6 @@ const Navbar = () => {
     setExtendNavbar(false);
   };
 
-  // When the user scrolls down 50px from the top of the document, resize logo
  
 
   return (
@@ -36,8 +35,8 @@ const Navbar = () => {
 
         <RightContainer>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/characters">About</NavLink>
-          <NavLink to="/planets">Projects</NavLink>
+          <NavLink to="/characters">Projects</NavLink>
+          <NavLink to="/planets">About</NavLink>
           <NavLink to="/starships">Contact</NavLink>
           <OpenLinksButton
             onClick={() => {
@@ -53,9 +52,9 @@ const Navbar = () => {
           <NavbarLinkExtendedOne onMenuItemSelect={closeNavbar} to="/">
             Home
           </NavbarLinkExtendedOne>
-          <NavbarLinkExtendedTwo to="/characters">About</NavbarLinkExtendedTwo>
+          <NavbarLinkExtendedTwo to="/characters"> Projects</NavbarLinkExtendedTwo>
           <NavbarLinkExtendedThree to="/planets">
-            Projects
+           About
           </NavbarLinkExtendedThree>
           <NavbarLinkExtendedFour to="/starships">
             Contact

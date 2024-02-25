@@ -12,6 +12,7 @@ export const NavbarContainer = styled.nav`
   flex-direction: column;
   @media screen and (min-width: 1024px) {
     height: 120px;
+    
   }
 
   @media screen and (min-width: 891px) {
@@ -19,7 +20,7 @@ export const NavbarContainer = styled.nav`
   }
 
   @media screen and (max-width: 640px) {
-    background:#272B30;
+    background: #272b30;
   }
 `;
 
@@ -27,6 +28,7 @@ export const NavbarInnerContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 30px 10% 0 10%;
+  
   @media screen and (max-width: 1024px) {
     margin-top: 15px;
   }
@@ -37,6 +39,7 @@ export const NavbarInnerContainer = styled.div`
 
 export const StyledLogo = styled.div`
   z-index: 9 !important;
+
 `;
 export const RightContainer = styled.div`
   display: flex;
